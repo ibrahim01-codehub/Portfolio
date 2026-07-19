@@ -1,0 +1,18 @@
+:root {
+    --bg-dark: #0d0616;
+    --purple: #a855f7;
+    --purple-light: #c084fc;
+    --text-light: #f5f3f7;
+    --text-muted: #b8aec2;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.15), transparent 40%);
+    padding: 50px 120px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+

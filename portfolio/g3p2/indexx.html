@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buter Treat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="#top" class="logo">
+            <span class="logo-mark">Butter Treat</span>
+            <span class="logo-sub">Bakeshop</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="#menu">Menu</a>
+            <a href="#info">Visit</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-btn" id="cart-open-btn" aria-label="Open cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/>
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="18" cy="21" r="1"/>
+            </svg>
+            <span>Order</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </header>
+
+    <main id="top">
+
+        <section class="hero">
+            <p class="eyebrow">Fresh batch, every day</p>
+            <h1>Every layer,<br>made from scratch.</h1>
+            <p class="hero-sub">Small-batch cakes, cupcakes and desserts baked daily in Lahore.
+                Order by email — no account, no app, just a quick note to our kitchen.</p>
+            <a href="#menu" class="btn btn-dark">View today's menu</a>
+        </section>
+
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>TODAY'S FRESH BATCH —&nbsp;</span>
+                <span>BELGIAN CHOCOLATE TRUFFLE —&nbsp;</span>
+                <span>LOTUS BISCOFF CAKE —&nbsp;</span>
+                <span>SALTED CARAMEL SUNDAE —&nbsp;</span>
+                <span>PISTACHIO ROSE CAKE —&nbsp;</span>
+                <span>TODAY'S FRESH BATCH —&nbsp;</span>
+                <span>BELGIAN CHOCOLATE TRUFFLE —&nbsp;</span>
+                <span>LOTUS BISCOFF CAKE —&nbsp;</span>
+                <span>SALTED CARAMEL SUNDAE —&nbsp;</span>
+                <span>PISTACHIO ROSE CAKE —&nbsp;</span>
+            </div>
+        </div>
+
+        <section class="menu-section" id="menu">
+            <div class="section-head">
+                <p class="eyebrow">The Menu</p>
+                <h2>Pick your order</h2>
+            </div>
+
+            <div class="filter-row" id="filter-row">
+                <button class="filter-btn is-active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cakes">Cakes</button>
+                <button class="filter-btn" data-filter="cupcakes">Cupcakes</button>
+                <button class="filter-btn" data-filter="brownies-cookies">Brownies &amp; Cookies</button>
+                <button class="filter-btn" data-filter="donuts">Mini Donuts</button>
+                <button class="filter-btn" data-filter="sundaes">Sundaes &amp; Desserts</button>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <section class="info-strip" id="info">
+            <div class="info-item">
+                <p class="info-title">Pickup &amp; Delivery</p>
+                <p class="info-text">Order by email and we'll confirm your pickup time or delivery slot within a few hours.</p>
+            </div>
+            <div class="info-item">
+                <p class="info-title">Hours</p>
+                <p class="info-text">Open daily, 11:00 AM – 11:00 PM</p>
+            </div>
+            <div class="info-item">
+                <p class="info-title">Custom Cakes</p>
+                <p class="info-text">Planning something special? Mention it in your order notes and we'll follow up.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-main">
+            <div class="logo footer-logo">
+                <span class="logo-mark">Butter Treat</span>
+                <span class="logo-sub">Bakeshop</span>
+            </div>
+            <div class="footer-contact">
+                <p>Email: <a href="mailto:ibrahim.candoit@gmail.com">ibrahim.candoit@gmail.com</a></p>
+                <p>Phone: 0302-7799588</p>
+                <p>Gulberg III, Lahore, Pakistan</p>
+            </div>
+        </div>
+        <p class="footer-note">© 2026 Butter Treat Bakeshop. All orders are placed by email </p>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Your order">
+        <div class="ticket-edge"></div>
+
+        <div class="cart-head">
+            <h2>Your Order</h2>
+            <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">&times;</button>
+        </div>
+
+        <div class="cart-body" id="cart-body">
+            <p class="cart-empty" id="cart-empty">Your order ticket is empty. Add something sweet from the menu.</p>
+            <div class="cart-items" id="cart-items"></div>
+        </div>
+
+        <div class="cart-summary" id="cart-summary">
+            <div class="ticket-line">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">Rs. 0</span>
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+                <label>
+                    Name
+                    <input type="text" id="customer-name" name="customer-name" required placeholder="Your full name">
+                </label>
+                <label>
+                    Phone
+                    <input type="tel" id="customer-phone" name="customer-phone" required placeholder="03xx-xxxxxxx">
+                </label>
+
+                <fieldset class="delivery-choice">
+                    <label class="radio-label">
+                        <input type="radio" name="delivery-method" value="Pickup" checked>
+                        Pickup
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="delivery-method" value="Delivery">
+                        Delivery
+                    </label>
+                </fieldset>
+
+                <label id="address-field" class="hidden">
+                    Delivery address
+                    <textarea id="customer-address" name="customer-address" rows="2" placeholder="House / street / area"></textarea>
+                </label>
+
+                <label>
+                    Notes <span class="optional">(optional)</span>
+                    <textarea id="customer-notes" name="customer-notes" rows="2" placeholder="Preferred time, message on cake, allergies..."></textarea>
+                </label>
+
+                <button type="submit" class="btn btn-dark btn-full" id="send-order-btn">Send order by email</button>
+            </form>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>

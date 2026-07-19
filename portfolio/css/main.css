@@ -1,0 +1,78 @@
+.gridone {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: start;
+    padding: 80px 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cvbutton{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.cvbutton a{
+    text-decoration: none;
+    color: var(--purple-light);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.cvbutton a:hover{
+    color: #ffffff;
+    text-shadow: 0 0 10px;
+    border-color:  rgba(168, 85, 247, 0.15);
+    
+}
+
+.cvbutton img {
+    width: 26px;
+    height: 28px;
+}
+
+.maininfo {
+    grid-column: 1;
+    margin-top: 50px;
+}
+
+.eye {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+.eyelash {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-muted);
+    max-width: 480px;
+}
+
+.mainimage {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+}
+
+.mainimage img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.3);
+}

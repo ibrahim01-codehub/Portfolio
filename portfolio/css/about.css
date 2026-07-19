@@ -1,0 +1,60 @@
+footer{
+    font: Fraunces;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(60, 37, 81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 0 , 20, 0.585);
+    border: 2px solid rgb(128, 12, 146);
+    box-shadow: 0 0 25px rgba(123, 0, 255, 0.4);
+    margin-bottom: 0px;
+    padding: 20px 5%;
+    border-left:none ;
+    border-right:none ;
+ }
+
+.rightabout{
+    margin-right: 30%;
+}
+
+.leftabout{
+    margin-left: 15%;
+}
+
+.upperlash{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.infomail{
+    transition: 0.5s ease;
+}
+
+.infomail a{
+    text-decoration: none;
+    font-size: large;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.infomail a:hover{
+    text-shadow: 0 0 10px #fff;
+}
+
+.infocontact{
+    margin-top: 8px;
+}
+
+@media (max-width: 560px) {
+    .gridfour {
+        padding: 70px 24px 100px;
+    }
+    .timeline {
+        padding-left: 22px;
+    }
+    .timeline-dot {
+        left: -29px;
+    }
+}
